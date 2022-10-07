@@ -1,6 +1,6 @@
 # LearnLua
 Learn how to use Lua
-
+Setup the environment of Lua in Windows
 ---
 
 ## Install Lua in Windows
@@ -18,3 +18,44 @@ Learn how to use Lua
 6. Edit the system environment variables and add the folder to the environment variable of path. 
 
 ---
+
+## Setup task in Vscode
+
+1. Run Build Task: Click 'Terminal' and then 'Run Build Task'
+
+2. Choose 'Configure Build task'
+
+3. Create tasks.json from template and choose 'Others'
+
+4. Paste the following content to the tasks.json
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Lua script",
+            "type": "shell",
+            "command": "lua",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
+---
+
+## Change the terminal to 'CMD' instead of 'PowerShell'
+
+1. Press Ctrl + Shift + P to open the command palette.
+
+2. Type 'profile' in the searcher
+
+3. Select 'Terminal: Select Default Profile'
+
+4. Select 'Command Prompt'

@@ -12,7 +12,7 @@ function GeneratePassword(str)
     return ans
 end
  
-
+-- main function
 password = GeneratePassword("abc")
 print(password)
 print(type(password))
